@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FORMAR" directorySegmentName="seg_0" id="CC60E03E-936E-30E1-3DCE-C4968C8E42DC">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:37:34 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<sourcePk>CD88230E-4955-DD44-C378-634F9EEEC9CF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DE774820-B5B6-0727-4B89-A778368CF91D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9EFE06B7-0483-B07E-DD2F-8530698D4491</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

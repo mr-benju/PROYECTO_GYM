@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="825B113A-F12F-0E75-3DC8-259E20D3CFE0" name="SOCIO_PLAN">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 20:32:52 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_socio_plan" id="BD660361-18A2-64C5-7B23-8DF30CC18FA5">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 20:33:01 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_inicio" id="6FF18517-A113-DF36-4FAA-03E860751A65">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 20:34:07 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_fin" id="83599DD2-93D1-B976-8AC2-C4173E324897">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 20:34:25 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="FE0DC01E-7F98-D7B0-6AAB-38723BDCE230">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 20:34:52 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_socio" id="FA45F19F-BBAC-83F2-FC2C-AA05FBF6DDCF">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:24:52 UTC</createdTime>
+<generatorID>9617E0B7-BC90-23F6-9F3A-77013752AFCD</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<referedAttribute>C6F13AF3-8063-25DF-7247-D72CE327DC6A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_plan" id="C815ABF3-F959-55C3-2F83-3F48796E61F1">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:26:48 UTC</createdTime>
+<generatorID>ABAF1F55-DBD4-7101-EFE7-F658A47FC380</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<referedAttribute>4F26C229-ABE5-A683-448C-184866F73B4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="97200312-3376-C2DC-0162-875FD547FD3A" name="SOCIO_PLAN PK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 20:33:22 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BD660361-18A2-64C5-7B23-8DF30CC18FA5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C55568F6-A745-6F48-73D6-CEECEA01A28C" name="ENTRENADOR">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>3499D216-CF1D-E343-0759-0652E6A404C9</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_entrenador" id="59C96D3D-CFFF-E4B5-3403-8FD4F7A98093">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>704766E5-3CD5-1435-BD35-8D7BDD2C0C32</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="3E22CFB4-1D9E-E136-BC2D-AF0402A54E2B">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>E559852B-FC64-B52A-AFC4-ABEB6B7D5CC8</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido" id="784ADECF-C101-159A-1B68-63B27C0CC4CE">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>7D05F406-604C-1F92-7857-C087EE4610E7</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="especialidad" id="EC9560A8-E399-4F52-FA91-D281F23A9342">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>18D98119-0DE8-CAB5-BA9B-1801D0C8F555</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="7B0A1AEF-D610-1E69-393C-559A47642BF3">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>E37AC092-3395-A13E-1D30-D0935720AAC3</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="correo" id="E06F1698-52DF-C67B-CF0A-8A1F2076A17D">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>5C7DCF11-52FC-1775-75C9-3EB3E99551F4</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUCURSAL_id_sucursal" id="3E4B2DF7-BDAD-5BB1-4B64-D507ADAF9684">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>DA393955-D36D-8657-7BBA-D879476CBC44</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3057BFA8-EBB7-C886-575D-EE3EBF4DE6D4" referredColumn="FE9F9B19-3161-B1F2-6DAE-D4137DDF6031"/>
+</associations>
+</Column>
+<Column name="MANTENCION_id_mantencion" id="F4503F86-B03D-3A63-CD23-400681F0FBC6">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>624CBC71-2B88-B204-DFC1-7DA5BA0DE167</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8C62BFE-4480-6CFA-4D77-40810C638154" referredColumn="40B93435-5121-2048-59CA-0084AF5B7126"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="291D7101-A826-BE26-F35A-683B9A1C0014" name="ENTRENADOR_PK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:42:10 UTC</createdTime>
+<generatorID>042B5461-9CB0-2BC0-6814-2C8949C98D46</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59C96D3D-CFFF-E4B5-3403-8FD4F7A98093"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75C93C93-FF6F-3735-F852-A256A732CC69" name="ENTRENADOR_SUCURSAL_FK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>47306D03-F138-3169-9E51-D6B8B070BFFB</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E4B2DF7-BDAD-5BB1-4B64-D507ADAF9684"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6DD785D6-4E44-97FF-D2DA-F869E456440C" name="ENTRENADOR_MANTENCION_FK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>AF12A6CB-3ECC-757F-1670-58D7B8DE0D1A</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4503F86-B03D-3A63-CD23-400681F0FBC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

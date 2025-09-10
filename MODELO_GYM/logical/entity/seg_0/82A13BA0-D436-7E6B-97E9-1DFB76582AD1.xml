@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="82A13BA0-D436-7E6B-97E9-1DFB76582AD1" name="SOCIO">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:51:26 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_socio" id="C6F13AF3-8063-25DF-7247-D72CE327DC6A">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:51:42 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rut" id="F6B78443-F105-5C28-E700-E819096C4C07">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:53:14 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="4BBE0AAE-2C8A-253E-B69A-F88F3BDD604E">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:54:51 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="964A3F8B-137A-14AE-3481-6E10DEE28025">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:55:03 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36</dataTypeSize>
+<ownDataTypeParameters>36,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_nacimiento" id="496174B8-7472-68C8-1703-F6CAB339029C">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:56:31 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="6E0D52C2-C457-CB9A-4FCE-7C8FC7708D69">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:58:04 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="F2C117D2-B08F-5C4C-4E3C-469E8B2D813E">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:59:31 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_inscripcion" id="6F9B0EA5-3C20-77A3-51B1-B20EDC8D882E">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 18:01:42 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="36397730-5239-7FA2-3E07-9CA3A68E8B46">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 18:03:50 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6F518758-7060-4384-90DC-B1F2E19E7108" name="SOCIO PK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:53:02 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C6F13AF3-8063-25DF-7247-D72CE327DC6A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

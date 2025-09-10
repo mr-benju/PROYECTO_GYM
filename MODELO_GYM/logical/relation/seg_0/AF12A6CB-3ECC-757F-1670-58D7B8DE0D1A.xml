@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="REALIZARv1" directorySegmentName="seg_0" id="AF12A6CB-3ECC-757F-1670-58D7B8DE0D1A">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:00:30 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<sourcePk>C8A8EB9A-C9D7-50A3-F815-CD816A827386</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5FECE907-97C4-A79A-9CEF-C8034BBC1BE6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3499D216-CF1D-E343-0759-0652E6A404C9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A59DFFE2-A623-19FC-2735-DF8149C73004" name="SOCIO_RUTINA">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>576FF011-80CC-463E-6716-6F5113228106</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_socio_rutina" id="3030112F-E8C8-B2B9-7932-C956E3742526">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>512370DD-0AE9-DB07-7E3D-BDA44E13F4AC</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_asignacion" id="2ECD6177-8D10-D161-8D0C-C07117AC401B">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>97382D72-430D-569D-BBB0-FD194B3A164B</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="717B803C-CEC6-5FF4-6833-8A360E671487">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>C969D82A-ED77-135B-AF17-6046F7DDDF3D</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOCIO_id_socio" id="F3207D16-58C0-7A63-A94D-368C37177802">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>7F1A0F48-E893-E4E9-BF87-1622F4F0A709</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CBF05918-454A-3661-49F8-AF0DBB25FFBA" referredColumn="F78E1B0E-0F41-D78A-543A-36A8B364CED8"/>
+</associations>
+</Column>
+<Column name="RUTINA_id_rutina" id="14D8FC99-384F-C5F8-A633-F9372D549620">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>76E4961C-4275-9CC6-922A-14A31FB43471</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BEC45BDA-4AA0-C128-F60D-5E1D391560E6" referredColumn="2D022874-8422-F503-9E82-D21B605BDBD5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="019EF833-AA25-A651-0A0B-F4E3802BA431" name="SOCIO_RUTINA_PK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>3FFF4219-DBD4-1C91-4A44-DE5949B59238</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3030112F-E8C8-B2B9-7932-C956E3742526"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A7568B0B-75D2-D61E-3AA6-FDB88EB94D9F" name="SOCIO_RUTINA_SOCIO_FK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>771CE182-6938-680D-F3C6-0D6541DEF91A</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3207D16-58C0-7A63-A94D-368C37177802"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A1DE645-4021-A221-A6DE-8C7D14C9D9E6" name="SOCIO_RUTINA_RUTINA_FK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:33:24 UTC</createdTime>
+<generatorID>596FDB88-AB85-7489-F628-07DC1C718C0C</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14D8FC99-384F-C5F8-A633-F9372D549620"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

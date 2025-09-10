@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MODELO_GYM" id="F3CFF00D-C5FF-CC0C-EA81-770773E2F7B6" version="3.5">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-29 17:50:49 UTC</createdTime>
+<ownerDesignName>MER_GIMNASIO</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F3CFF00D-C5FF-CC0C-EA81-770773E2F7B6</designId>
+</OSDM_Design>

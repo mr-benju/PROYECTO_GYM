@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PUEDE" directorySegmentName="seg_0" id="A0FF54EA-DD82-741E-B4E3-167EDA705070">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-08-31 21:34:52 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<sourcePk>042B5461-9CB0-2BC0-6814-2C8949C98D46</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3499D216-CF1D-E343-0759-0652E6A404C9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>06A941E9-BF76-E205-84D1-4A190D68838C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

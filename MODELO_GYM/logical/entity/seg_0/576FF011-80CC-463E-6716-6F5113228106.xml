@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="576FF011-80CC-463E-6716-6F5113228106" name="SOCIO_RUTINA">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:28:47 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_socio_rutina" id="512370DD-0AE9-DB07-7E3D-BDA44E13F4AC">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:28:57 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_asignacion" id="97382D72-430D-569D-BBB0-FD194B3A164B">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:29:11 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="C969D82A-ED77-135B-AF17-6046F7DDDF3D">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:29:55 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_socio" id="7F1A0F48-E893-E4E9-BF87-1622F4F0A709">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:32:09 UTC</createdTime>
+<generatorID>771CE182-6938-680D-F3C6-0D6541DEF91A</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<referedAttribute>C6F13AF3-8063-25DF-7247-D72CE327DC6A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_rutina" id="76E4961C-4275-9CC6-922A-14A31FB43471">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:32:19 UTC</createdTime>
+<generatorID>596FDB88-AB85-7489-F628-07DC1C718C0C</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<referedAttribute>CCDCFDFB-4193-3BFD-ADD7-DFC662487E0C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3FFF4219-DBD4-1C91-4A44-DE5949B59238" name="SOCIO_RUTINA PK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:29:09 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>512370DD-0AE9-DB07-7E3D-BDA44E13F4AC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

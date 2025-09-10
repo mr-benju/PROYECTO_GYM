@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="693902F2-BFB9-8F23-24DB-2B0477D3B661" name="SOCIO_SUCURSAL">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>47DD6C97-FA0E-380D-E7A8-F3DA7DEAB0BC</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_socio_sucursal" id="DFCF102A-CE8F-A0AE-642F-55265342CFA5">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>1C079CA8-BCD8-C9FB-9E81-818AC70D717F</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_acceso" id="6D5999C4-7C12-8042-5723-49DE94C3E587">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>CD79F6D0-7EA4-5986-54FB-B2A0760ABBFD</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOCIO_id_socio" id="0E0827E3-65B0-0B9C-EE4C-980D488653B9">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>7F55AF4D-BEFC-E681-92A3-A64FD497E337</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1356D26E-C5AE-82F3-E39E-F774A2542A47" referredColumn="F78E1B0E-0F41-D78A-543A-36A8B364CED8"/>
+</associations>
+</Column>
+<Column name="SUCURSAL_id_sucursal" id="1066090B-C262-5CC4-6D98-11213B1F65C2">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>8FAD6E31-B67B-EE08-6C5A-FA9C19306A80</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7D9182B2-979D-791E-8FDD-F68BF52EEC50" referredColumn="FE9F9B19-3161-B1F2-6DAE-D4137DDF6031"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C7E34223-938C-BE16-638B-08072FD6513F" name="SOCIO_SUCURSAL_PK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>1E4F0A87-EC57-F0FA-BAAF-F9C5AAFFBF4E</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFCF102A-CE8F-A0AE-642F-55265342CFA5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79493F4D-1118-8AA4-44DE-3B87D365AAFF" name="SOCIO_SUCURSAL_SOCIO_FK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>51A9D6F8-F858-422C-4A18-0F1AE4B728A4</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E0827E3-65B0-0B9C-EE4C-980D488653B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5BC87EA-77C7-8771-6888-9F850ED4540F" name="SOCIO_SUCURSAL_SUCURSAL_FK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-07 00:18:40 UTC</createdTime>
+<generatorID>4734D337-C883-5186-64A2-D5E6032432B9</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1066090B-C262-5CC4-6D98-11213B1F65C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

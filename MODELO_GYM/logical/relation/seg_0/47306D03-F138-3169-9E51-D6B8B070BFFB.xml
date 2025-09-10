@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Pertenece" directorySegmentName="seg_0" id="47306D03-F138-3169-9E51-D6B8B070BFFB">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-06 23:40:14 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<sourcePk>181E4862-D114-A778-9839-ED5A4A93CD1E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>296924CE-8280-F910-CADB-37ABA19FDC6B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3499D216-CF1D-E343-0759-0652E6A404C9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

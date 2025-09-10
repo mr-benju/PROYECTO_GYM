@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="47DD6C97-FA0E-380D-E7A8-F3DA7DEAB0BC" name="SOCIO_SUCURSAL">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-06 23:51:20 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_socio_sucursal" id="1C079CA8-BCD8-C9FB-9E81-818AC70D717F">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-06 23:51:53 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_acceso" id="CD79F6D0-7EA4-5986-54FB-B2A0760ABBFD">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-06 23:52:19 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_socio" id="7F55AF4D-BEFC-E681-92A3-A64FD497E337">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-06 23:55:56 UTC</createdTime>
+<generatorID>51A9D6F8-F858-422C-4A18-0F1AE4B728A4</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<referedAttribute>C6F13AF3-8063-25DF-7247-D72CE327DC6A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_sucursal" id="8FAD6E31-B67B-EE08-6C5A-FA9C19306A80">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-06 23:57:21 UTC</createdTime>
+<generatorID>4734D337-C883-5186-64A2-D5E6032432B9</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<referedAttribute>9CC9ADBF-673F-BC17-DA74-A4FAC6720291</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1E4F0A87-EC57-F0FA-BAAF-F9C5AAFFBF4E" name="SOCIO_SUCURSAL PK">
+<createdBy>Servicios Digitales</createdBy>
+<createdTime>2025-09-06 23:52:12 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1C079CA8-BCD8-C9FB-9E81-818AC70D717F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
