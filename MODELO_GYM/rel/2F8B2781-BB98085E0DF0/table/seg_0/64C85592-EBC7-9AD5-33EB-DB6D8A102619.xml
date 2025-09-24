@@ -87,6 +87,18 @@
 <colAssociation fkAssociation="C56D5056-80D7-20A1-A2FD-DF4A347393BE" referredColumn="FE9F9B19-3161-B1F2-6DAE-D4137DDF6031"/>
 </associations>
 </Column>
+<Column name="fecha_programada" id="ED7C55CE-C289-88BF-D7FA-6387C78F75CE">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-09-24 19:53:45 UTC</createdTime>
+<generatorID>2D9613CD-929A-5272-316E-1079064E6640</generatorID>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="E6D71AF7-CA45-7B13-9CD7-ADC9C0B8BF91" name="MANTENCION_PK">

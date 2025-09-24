@@ -40,6 +40,19 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="fecha_programada" id="2D9613CD-929A-5272-316E-1079064E6640">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-09-24 19:53:15 UTC</createdTime>
+<ownerDesignName>MODELO_GYM</ownerDesignName>
+<engineerTo>
+<item key="2F8B2781-8068-CA06-DA05-BB98085E0DF0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="tipo_mantencion" id="86004646-DBD4-0739-F28D-6530C4846812">
 <createdBy>Servicios Digitales</createdBy>
 <createdTime>2025-09-06 23:29:47 UTC</createdTime>
