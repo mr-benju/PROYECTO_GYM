@@ -45,6 +45,7 @@ CREATE TABLE MAQUINA (
 CREATE TABLE MANTENCION (
     id_mantencion   NUMBER PRIMARY KEY,
     fecha_mantencion DATE,
+    fecha_programada DATE,
     tipo_mantencion  VARCHAR2(100),
     descripcion      VARCHAR2(200),
     id_maquina       NUMBER NOT NULL,
@@ -310,4 +311,3 @@ INSERT INTO RUTINA_EJERCICIO (id_rutina, id_ejercicio, repeticiones, series, tie
 INSERT INTO RUTINA_EJERCICIO (id_rutina, id_ejercicio, repeticiones, series, tiempo_descanso) VALUES (2, 4, 60, 4, 30);
 INSERT INTO RUTINA_EJERCICIO (id_rutina, id_ejercicio, repeticiones, series, tiempo_descanso) VALUES (3, 3, 10, 4, 90);
 INSERT INTO RUTINA_EJERCICIO (id_rutina, id_ejercicio, repeticiones, series, tiempo_descanso) VALUES (5, 5, 20, 3, 45);
-
