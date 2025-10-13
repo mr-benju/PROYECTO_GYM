@@ -171,3 +171,85 @@ VALUES (202, SYSDATE, 45000, 'Tarjeta', 'Pagado', 2);
 
 
 
+//DROP TRIGGER TRG_KPI_MANTENCIONES;
+
+CREATE OR REPLACE PROCEDURE KPI_MANTENCIONES_SUCURSAL IS
+    -- Record con los datos de cada sucursal
+    TYPE sucursal_rec IS RECORD (
+        id_sucursal        SUCURSAL.id_sucursal%TYPE,
+        nombre_sucursal    SUCURSAL.nombre_sucursal%TYPE,
+        total_mantenciones NUMBER
+    );
+
+    -- Array (tabla PL/SQL indexada) de records
+    TYPE mant_array IS TABLE OF sucursal_rec INDEX BY PLS_INTEGER;
+    mantenciones mant_array;
+
+    i PLS_INTEGER := 0;
+BEGIN
+    -- Recorre todas las sucursales
+    FOR s IN (SELECT id_sucursal, nombre_sucursal FROM SUCURSAL ORDER BY id_sucursal) LOOP
+        i := i + 1;
+        mantenciones(i).id_sucursal := s.id_sucursal;
+        mantenciones(i).nombre_sucursal := s.nombre_sucursal;
+
+        -- Cuenta las mantenciones de las máquinas de esa sucursal
+        SELECT NVL(COUNT(m.id_mantencion), 0)
+        INTO mantenciones(i).total_mantenciones
+        FROM MANTENCION m
+        JOIN MAQUINA maq ON m.id_maquina = maq.id_maquina
+        WHERE maq.id_sucursal = s.id_sucursal;
+
+    END LOOP;
+
+    -- Mostrar resultados
+    DBMS_OUTPUT.PUT_LINE('===== KPI: MANTENCIONES REALIZADAS POR SUCURSAL =====');
+    FOR j IN 1..mantenciones.COUNT LOOP
+        DBMS_OUTPUT.PUT_LINE(
+            'Sucursal: ' || mantenciones(j).nombre_sucursal ||
+            ' | Total Mantenciones: ' || mantenciones(j).total_mantenciones
+        );
+    END LOOP;
+END;
+/
+
+BEGIN
+    KPI_MANTENCIONES_SUCURSAL;
+END;
+/
+
+
+CREATE OR REPLACE TRIGGER TRG_KPI_MANTENCIONES_SUCURSAL
+AFTER INSERT OR UPDATE OR DELETE ON MANTENCION
+DECLARE
+    CURSOR c_sucursales IS
+        SELECT id_sucursal, nombre_sucursal FROM SUCURSAL ORDER BY id_sucursal;
+    v_total NUMBER;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('===== TRIGGER KPI MANTENCIONES POR SUCURSAL =====');
+    FOR s IN c_sucursales LOOP
+        SELECT NVL(COUNT(m.id_mantencion), 0)
+        INTO v_total
+        FROM MANTENCION m
+        JOIN MAQUINA maq ON m.id_maquina = maq.id_maquina
+        WHERE maq.id_sucursal = s.id_sucursal;
+
+        DBMS_OUTPUT.PUT_LINE('Sucursal: ' || s.nombre_sucursal || 
+                             ' | Mantenciones Totales: ' || v_total);
+    END LOOP;
+END;
+/
+
+INSERT INTO MANTENCION (id_mantencion, fecha_mantencion, tipo_mantencion, descripcion, id_maquina)
+VALUES (44, SYSDATE, 'Preventiva', 'Cambio de piezas menores', 2);
+
+
+-- EN CASO DE VERIFICAR QUE HAYA MAS DE UN TRIGGER
+//SELECT trigger_name, triggering_event
+//FROM user_triggers
+//WHERE table_name = 'MANTENCION';
+
+
+
+
+
