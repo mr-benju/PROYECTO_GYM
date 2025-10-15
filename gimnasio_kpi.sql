@@ -343,6 +343,9 @@ END;
 INSERT INTO RUTINA (id_rutina, nombre_rutina, descripcion, nivel, id_entrenador)
 VALUES (301, 'Fuerza Avanzada', 'Entrenamiento de fuerza de nivel avanzado', 'Avanzado', 1);
 
+
+
+
 // KPI PARA ESTE SE OCUPA UNA TABLA ADICIONAL, YA QUE SE MANIPULAN DATOS DE VARIAS TABLAS 
 
 CREATE TABLE KPI_PLANES_MAS_ACTIVOS (
@@ -453,15 +456,60 @@ SELECT * FROM KPI_PLANES_MAS_ACTIVOS;
 
 
 
+-- Tipo RECORD (objeto) para almacenar información de cada plan
+CREATE OR REPLACE TYPE tipo_plan_info AS OBJECT (
+  id_plan NUMBER,
+  nombre_plan VARCHAR2(100),
+  ingresos_totales NUMBER
+);
+/
+
+-- Tipo TABLE (array PL/SQL) para manejar una lista de planes
+CREATE OR REPLACE TYPE lista_planes AS TABLE OF tipo_plan_info;
+/
+
+CREATE OR REPLACE PROCEDURE calcular_ingresos_por_plan IS
+  v_lista lista_planes := lista_planes();  -- ARRAY para guardar los resultados
+  v_registro tipo_plan_info;               -- RECORD temporal
+BEGIN
+  FOR plan_rec IN (
+    SELECT p.id_plan,
+           p.nombre_plan,
+           NVL(SUM(pg.monto), 0) AS total_ingresos
+    FROM plan p
+    LEFT JOIN socio_plan sp ON p.id_plan = sp.id_plan
+    LEFT JOIN pago pg ON sp.id_socio_plan = pg.id_socio_plan
+    WHERE pg.estado = 'Pagado'
+    GROUP BY p.id_plan, p.nombre_plan
+    ORDER BY p.id_plan
+  ) LOOP
+    -- Guardar en el RECORD
+    v_registro := tipo_plan_info(plan_rec.id_plan, plan_rec.nombre_plan, plan_rec.total_ingresos);
+    v_lista.EXTEND;
+    v_lista(v_lista.LAST) := v_registro;
+
+    -- Mostrar resultados en consola
+    DBMS_OUTPUT.PUT_LINE('Plan: ' || plan_rec.nombre_plan || ' | Ingresos totales: $' || plan_rec.total_ingresos);
+  END LOOP;
+END;
+/
 
 
 
 
+// probar kpi
+SET SERVEROUTPUT ON;
+EXEC calcular_ingresos_por_plan;
 
 
+// Razones para no implementar trigger en este kpi 
+// Oracle no permite consultar la misma tabla dentro de un trigger “fila a fila” mientras se está modificando → errores ORA-04091 (tabla mutante).
 
+//Usar triggers “a nivel de fila” + agregaciones como SUM() y GROUP BY casi siempre da problemas.
 
+//Los triggers no muestran DBMS_OUTPUT de manera confiable cuando se dispara por insert masivo → no ves nada en consola.
 
+//Resultado: casi siempre terminas haciendo “paquetes y triggers dobles” solo para que funcione, lo que complica más que ayuda.
 
 
 
