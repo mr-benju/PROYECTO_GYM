@@ -511,5 +511,127 @@ EXEC calcular_ingresos_por_plan;
 
 //Resultado: casi siempre terminas haciendo “paquetes y triggers dobles” solo para que funcione, lo que complica más que ayuda.
 
+-- ===========================================================
+-- KPI 7: DISPONIBILIDAD DE MÁQUINAS POR SUCURSAL
+-- ===========================================================
+
+CREATE OR REPLACE PROCEDURE kpi_disponibilidad_maquinas IS
+    -- RECORD con la información de cada sucursal
+    TYPE sucursal_rec IS RECORD (
+        id_sucursal      SUCURSAL.id_sucursal%TYPE,
+        nombre_sucursal  SUCURSAL.nombre_sucursal%TYPE,
+        disponibles      NUMBER,
+        mantenimiento    NUMBER
+    );
+
+    -- ARRAY (tabla indexada de registros)
+    TYPE t_resultados IS TABLE OF sucursal_rec INDEX BY PLS_INTEGER;
+    v_resultados t_resultados;
+
+    -- Cursor para recorrer todas las sucursales
+    CURSOR c_sucursales IS
+        SELECT id_sucursal, nombre_sucursal FROM SUCURSAL;
+
+    -- Variables auxiliares
+    v_sucursal sucursal_rec;
+    i NUMBER := 0;
+
+BEGIN
+    OPEN c_sucursales;
+    LOOP
+        FETCH c_sucursales INTO v_sucursal.id_sucursal, v_sucursal.nombre_sucursal;
+        EXIT WHEN c_sucursales%NOTFOUND;
+
+        -- Contar máquinas disponibles
+        SELECT COUNT(*)
+        INTO v_sucursal.disponibles
+        FROM MAQUINA
+        WHERE id_sucursal = v_sucursal.id_sucursal
+        AND UPPER(estado) = 'DISPONIBLE';
+
+        -- Contar máquinas en mantenimiento
+        SELECT COUNT(*)
+        INTO v_sucursal.mantenimiento
+        FROM MAQUINA
+        WHERE id_sucursal = v_sucursal.id_sucursal
+        AND UPPER(estado) = 'MANTENIMIENTO';
+
+        -- Guardar los resultados en el arreglo
+        i := i + 1;
+        v_resultados(i) := v_sucursal;
+    END LOOP;
+    CLOSE c_sucursales;
+
+    -- Mostrar resultados
+    DBMS_OUTPUT.PUT_LINE('===== KPI: Disponibilidad de Máquinas por Sucursal =====');
+    FOR j IN 1 .. v_resultados.COUNT LOOP
+        DBMS_OUTPUT.PUT_LINE(
+            'Sucursal: ' || v_resultados(j).nombre_sucursal ||
+            ' | Disponibles: ' || v_resultados(j).disponibles ||
+            ' | En Mantenimiento: ' || v_resultados(j).mantenimiento
+        );
+    END LOOP;
+END;
+/
+
+SET SERVEROUTPUT ON;
+EXEC kpi_disponibilidad_maquinas;
+
+CREATE OR REPLACE TRIGGER trg_kpi_disponibilidad_maquinas
+AFTER INSERT OR UPDATE OR DELETE ON MAQUINA
+DECLARE
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('*** Actualización automática del KPI: Disponibilidad de Máquinas ***');
+
+    FOR r IN (
+        SELECT 
+            s.id_sucursal,
+            s.nombre_sucursal,
+            SUM(CASE WHEN UPPER(m.estado) = 'DISPONIBLE' THEN 1 ELSE 0 END) AS disponibles,
+            SUM(CASE WHEN UPPER(m.estado) = 'MANTENIMIENTO' THEN 1 ELSE 0 END) AS mantenimiento
+        FROM SUCURSAL s
+        LEFT JOIN MAQUINA m ON s.id_sucursal = m.id_sucursal
+        GROUP BY s.id_sucursal, s.nombre_sucursal
+        ORDER BY s.id_sucursal
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE(
+            'Sucursal: ' || r.nombre_sucursal ||
+            ' | Disponibles: ' || r.disponibles ||
+            ' | En Mantenimiento: ' || r.mantenimiento
+        );
+    END LOOP;
+END;
+/
+
+UPDATE MAQUINA
+SET estado = 'Mantenimiento'
+WHERE id_maquina = 1;
+
+UPDATE MAQUINA
+SET estado = 'Disponible'
+WHERE id_maquina = 2;
+
+// FUNCIONA TAMBIEN AL INSERTAR UNA NUEVA MAQUINA
+INSERT INTO MAQUINA (id_maquina, nombre_maquina, descripcion, estado, fecha_adquisicion, id_sucursal)
+VALUES (16, 'Nueva máquina de remo', 'Equipo nuevo', 'Disponible', SYSDATE, 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
